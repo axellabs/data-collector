@@ -2,4 +2,14 @@
 
 body {
   font-family: Lora, Helvetica, serif;
+  box-sizing: border-box;
+}
+
+.app-body {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h3 {
+  margin: 0;
 }
