@@ -3,12 +3,14 @@ import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import styled from 'styled-components';
 import "react-tabs/style/react-tabs.css";
 import StudentMenu from './StudentMenu'
+import StudentPage from './StudentPage'
 
 const Sidebar = styled.div`
-  height: 100vw;
+  min-height: 100vh;
+  height: 100%;
   width: 250px;
   border-right: 2px solid black;
-  margin-right: 35px;
+  margin-left: 10px;
 `
 
 class TabbedPage extends Component {
@@ -27,10 +29,14 @@ class TabbedPage extends Component {
           </TabList>
 
           <TabPanel>
-            <StudentMenu sidebar={false} />
+            <div className="app-body">
+              <StudentMenu sidebar={false} />
+            </div>
           </TabPanel>
           <TabPanel>
-            <h2>Any content 2</h2>
+            <div className="app-body">
+              <StudentPage />
+            </div>
           </TabPanel>
         </Tabs>
       </div>

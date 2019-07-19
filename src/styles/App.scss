@@ -9,6 +9,12 @@ body {
 .app-body {
   max-width: 900px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+.react-calendar {
+  margin: 0 auto;
+  border: none !important;
 }
 
 h3 {

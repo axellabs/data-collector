@@ -7,7 +7,7 @@ import TabbedPage from './TabbedPage'
 
 class App extends Component {
   state = {
-    openPages: ['Menu', 'wow']
+    openPages: ['Menu', 'John Smith']
   }
 
   openStudent = (studentName) => {
@@ -18,7 +18,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="app-body">
+      <div>
         {this.state.openPages.length > 1 ?
           <TabbedPage allTabs={this.state.openPages} addStudent={this.openStudent} /> :
           <StartPage addStudent={this.openStudent}/>

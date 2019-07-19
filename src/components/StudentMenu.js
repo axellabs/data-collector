@@ -21,7 +21,7 @@ const StudentCardStyled = styled.div`
 
 const AddStudentCardStyled = styled.div`
   height: 40px;
-  border: 2px solid black;
+  border: ${props => props.sidebar ? 'none' : '2px solid black'};
   color: white;
   background-color: #000;
   padding-top: 20px;
