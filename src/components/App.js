@@ -11,4 +11,6 @@ function App() {
   );
 }
 
+console.log("testing")
+
 export default App;

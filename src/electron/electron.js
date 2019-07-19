@@ -11,10 +11,7 @@ function createWindow () {
   mainWindow = new BrowserWindow({
     width: 1000,
     height: 800,
-    icon: path.join(__dirname, './icon.png'),
-    webPreferences: {
-      preload: path.join(__dirname, 'preload.js')
-    }
+    icon: path.join(__dirname, './icon.png')
   })
 
   const startUrl = 'http://localhost:3000' || url.format({
