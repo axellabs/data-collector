@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
+import { connect } from 'react-redux'
 import styled from 'styled-components'
-import students from "../data/students"
+
+import { getAllStudents } from '../redux/selectors'
 
 const StudentCardStyled = styled.div`
   height: 40px;
@@ -50,6 +52,7 @@ const StudentCard = (props) => (
 
 class StudentMenu extends Component {
   render() {
+    const { students } = this.props
     const studentCards = students.map(student =>
       <StudentCard
         key={student.studentID}
@@ -69,4 +72,10 @@ class StudentMenu extends Component {
   }
 }
 
-export default StudentMenu
+const mapStateToProps = state => {
+  return {
+    students: getAllStudents(state)
+  }
+}
+
+export default connect(mapStateToProps)(StudentMenu)

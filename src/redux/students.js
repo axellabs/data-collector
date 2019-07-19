@@ -1,4 +1,4 @@
-[
+const initialState = [
   {
     "studentID": "3879",
     "firstName": "John",
@@ -35,3 +35,14 @@
     "teacher": "Bell, Howard"
   }
 ]
+
+function studentReducer(state = initialState, action) {
+  switch (action.type) {
+    case 'ADD_STUDENT':
+      return initialState.push(action.studentInfo)
+    default:
+      return state
+  }
+}
+
+export default studentReducer
