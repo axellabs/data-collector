@@ -9,8 +9,9 @@ let mainWindow
 function createWindow () {
   // Create the browser window.
   mainWindow = new BrowserWindow({
-    width: 800,
-    height: 600,
+    width: 1000,
+    height: 800,
+    icon: path.join(__dirname, './icon.png'),
     webPreferences: {
       preload: path.join(__dirname, 'preload.js')
     }
@@ -35,6 +36,8 @@ function createWindow () {
     // when you should delete the corresponding element.
     mainWindow = null
   })
+
+  require('./menu')
 }
 
 // This method will be called when Electron has finished
